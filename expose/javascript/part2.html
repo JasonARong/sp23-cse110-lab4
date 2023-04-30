@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+The content of the body element is displayed in your browser.
+</body>
+<script>
+    function sumValues(num1, num2, add){
+        if (add){
+        const result = 0;
+        result = num1 + num2;
+        //alert(result);
+        }
+        else{
+        //alert(result);
+        return;
+        }
+        alert(result);
+    }
+    /*function discountPrices(prices, discount){
+        let discounted = [];
+        let finalPrice = 0;
+        for (let i = 0; i < prices.length; i++){
+            let discountedPrice = prices[i] * (1 - discount)
+            finalPrice = Math.round(discountedPrice * 100) / 100;
+            discounted.push(finalPrice);
+        }
+        
+        //console.log(i);
+        //console.log(discountedPrice);
+        //console.log(finalPrice);
+        console.log(discounted);
+
+        return discounted;
+    }*/
+    function discountPrices(prices, discount){
+        const discounted = [];
+        const length = prices.length;
+        for (let i = 0; i < length; i++){
+            const discountedPrice = prices[i] * (1 - discount)
+            discounted.push(discountedPrice);
+        }
+        
+        //console.log(i);
+        //console.log(length);
+        //console.log(discounted);
+        return discounted;
+    }
+    discountPrices([100,200,300], 0.5);
+
+    let student = {
+        name: 'Sarah',
+        major: 'Comupter Science',
+        'Grad Year': '2022',
+        greeting: function(){
+            console.log('Hello!');
+        },
+        'Favorite Teacher': {
+            name: 'Thomas Powell',
+            course: 'CSE 110'
+        },
+        courseLoaad: ['CSE110', 'CSE134', 'VIS 41']
+    };
+
+    let statistics = {
+        redCars: 21,
+        blueCars: 45,
+        greenCars: 12,
+        raceCars: 5,
+        blackCars: 40,
+        rareCars: 2,
+    }
+    for (let carType in statistics) {
+        if (carType.charAt(0) === 'r' || statistics[carType]%2 === 1) {
+            console.log(statistics[carType]);
+        }
+    }
+
+
+    function modifyArray(array, callback){
+        const newArr = [];
+        for (let i=0; i < array.length; i++){
+            newArr.push(callback(array[i]));
+        }
+        console.log(newArr);
+        return newArr;
+    }
+    function doSomething(num) {
+        return num * 2;
+    }
+    modifyArray([1,2,3], doSomething);
+
+    /*setInterval(function(){
+        let d = new Date();
+        let time = d.toLocaleTimeString();
+        console.log(time);    
+    }, 1000)*/
+    function printNums(){
+        console.log(1);
+        setTimeout(function(){
+            console.log(2);
+        },1000)
+        setTimeout(function(){
+            console.log(3);
+        },0)
+        console.log(4)
+    }
+    printNums();
+</script>
+</html>
