@@ -23,7 +23,7 @@
     3. 3
     4. 3null
     5. 4
-    6. 0 ?
+    6. 0
     7. 3undefined
     8. NaN
 14. Comparison
